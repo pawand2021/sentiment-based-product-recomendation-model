@@ -26,7 +26,7 @@ class SentimentRecommenderModel:
     def __init__(self):
         self.model = pickle.load(open(
             SentimentRecommenderModel.ROOT_PATH + SentimentRecommenderModel.MODEL_NAME, 'rb'))
-        print("PATHS " + SentimentRecommenderModel.ROOT_PATH + SentimentRecommenderModel.MODEL_NAME)
+        
         self.vectorizer = pd.read_pickle(
             SentimentRecommenderModel.ROOT_PATH + SentimentRecommenderModel.VECTORIZER)
         self.user_final_rating = pickle.load(open(
